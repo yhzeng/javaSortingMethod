@@ -1,0 +1,40 @@
+//Given a target integer T, a non-negative integer K and an integer array A sorted in ascending order, 
+//find the K closest numbers to T in A.
+
+public int[] kClosest(int[] array, int target, int k) {
+		// Write your solution here
+		int[] res = new int[k];
+		if (array == null || array.length == 0) {
+			return null;
+		}
+		int left = 0, right = array.length - 1, count = 0;
+		while (left < right - 1) {
+			int mid = left + (right - left) / 2;
+			if (array[mid] == target) {
+				// left = mid;
+				res[count] = target;
+				count++;
+				break;
+			} else if (array[mid] < target) {
+				left = mid;
+			} else {
+				right = mid;
+			}
+		}
+		//
+		while (count < k) {
+			// right >= array.length || left >= 0 is a critical part of the condition area.
+			if (right >= array.length
+					|| left >= 0 && Math.abs(array[left] - target) <= Math.abs(array[right] - target)) {
+				res[count] = array[left];
+
+				left--;
+			} else {
+				res[count] = array[right];
+
+				right++;
+			}
+			count++;
+		}
+		return res;
+	}
