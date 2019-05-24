@@ -1,6 +1,7 @@
 //Given a target integer T and an integer array A sorted in ascending order, 
 //find the index i in A such that A[i] is closest to T.
 
+//Time: O(logn)
 public int closest(int[] array, int target) {
 		// Write your solution here
 		if (array == null || array.length == 0) {
