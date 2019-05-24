@@ -1,6 +1,7 @@
 //Given a target integer T, a non-negative integer K and an integer array A sorted in ascending order, 
 //find the K closest numbers to T in A.
 
+//Time: O(logn + k)
 public int[] kClosest(int[] array, int target, int k) {
 		// Write your solution here
 		int[] res = new int[k];
