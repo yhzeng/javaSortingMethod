@@ -4,6 +4,8 @@
 //Given a target number, returning the position that the target locates within the matrix. 
 //If the target number does not exist in the matrix, return {-1, -1}.
 
+// Time: O(log m + log n)
+// Space: O(1)
 public int[] search(int[][] matrix, int target) {
 		// Write your solution here
 		if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
