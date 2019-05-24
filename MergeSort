@@ -1,6 +1,8 @@
+//Time: O(nlogn)
+//Space: O(logn)
+
 public class Solution {
   public int[] mergeSort(int[] array) {
-    // Write your solution here
    int left = 0;
    int right = array.length - 1;
    if(array==null||array.length<=1) {
