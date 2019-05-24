@@ -2,6 +2,7 @@
 //determine if a given target integer T is in the dictionary. 
 //Return the index of T in A, return -1 if T is not in A.
 
+//Time: O(log10n + log2(10n))
 interface Dictionary {
     public Integer get(int index);
   }
